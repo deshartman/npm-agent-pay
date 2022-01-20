@@ -1,0 +1,35 @@
+{
+  "name": "@deshartman/agent-pay",
+  "version": "4.1.0",
+  "description": "Simple Twilio Agent Assisted Payment library to capture credit cards for tokens using Twilio Functions and Segment",
+  "main": "AgentAssistPayClient.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deshartman/AgentPay.git"
+  },
+  "keywords": [
+    "Twilio",
+    "Twilio Pay",
+    "Twilio Agent Assisted Payments",
+    "Twilio Functions",
+    "Twilio Segment"
+  ],
+  "author": "Des Hartman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deshartman/AgentPay/issues"
+  },
+  "homepage": "https://github.com/deshartman/AgentPay#readme",
+  "type": "module",
+  "dependencies": {
+    "@analytics/segment": "^1.1.3",
+    "analytics": "^0.7.21",
+    "axios": "^0.24.0",
+    "events": "^3.3.0",
+    "twilio": "^3.73.0",
+    "twilio-sync": "^3.0.6"
+  }
+}
