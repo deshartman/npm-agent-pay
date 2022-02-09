@@ -71,6 +71,13 @@ export default class AgentAssistPayClient extends EventEmitter {
         console.log(`SDK paymentConnector: ${this.paymentConnector}`);
 
         // --------------------------------------------------
+        // Set the Bearer Token for all calls to the API
+        // --------------------------------------------------
+        axios.defaults.headers.common = {
+            'Authorization': 'Bearer ' + this.syncToken
+        };
+
+        // --------------------------------------------------
         // Optional Parameters
         // --------------------------------------------------
         // Convert Capture Order string to an Array, removing whitespace
