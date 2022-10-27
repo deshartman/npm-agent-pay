@@ -243,7 +243,7 @@ export default class AgentAssistPayClient extends EventEmitter {
     // --------------------------------------------------
     // This kicks off the capture process.
     // --------------------------------------------------
-    async startCapture() {  // 
+    async startCapture(chargeAmount) {  // 
         this._captureOrder = this._captureOrderTemplate.slice(); // Copy values
 
         // POST body data
@@ -252,7 +252,7 @@ export default class AgentAssistPayClient extends EventEmitter {
             'callSid': this.callSid,
             'IdempotencyKey': this.identity + Date.now().toString(),
             'StatusCallback': this._statusCallback,
-            'ChargeAmount': 0,
+            'ChargeAmount': chargeAmount || 0,
             'TokenType': this.tokenType,
             'Currency': this.currency,
             'PaymentConnector': this.paymentConnector,
